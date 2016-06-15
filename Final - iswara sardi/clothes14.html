@@ -29,7 +29,7 @@
 <body ng-app="">
 
     <!-- Navigation -->
-    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation" style="background-color:white;color:black;">
+    <nav class="navbar navbar-default navbar-fixed-top" role="navigation" style="background-color:white;color:black;">
         <div class="container">
             <!-- Brand and toggle get grouped for better mobile display -->
             <div class="navbar-header">
@@ -147,21 +147,28 @@ casual directing!</p>
   Pick it!
   <select ng-model="myVar">
     <option value="">
-    <option value="dogs">Black
-    <option value="tuts">Navy
-    <option value="cars">Brown
+    <option value="black">Black
+    <option value="navy">Navy
+    <option value="brown">Brown
   </select>
 </form>
+  Amount:
+  <select ng-model="myCount">
+    <option value="">
+    <option value="1">1
+    <option value="2">2
+    <option value="3">3
+  </select>
 <br>
-<div ng-switch="myVar">
-  <div ng-switch-when="dogs">
-     <p>Total  :  ₩ 22,400</p>
+<div ng-switch="myVar" ng-init="price='22,400'">
+  <div ng-switch-when="black">
+     <p>Total ₩ {{price*myCount}}}</p>
   </div>
-  <div ng-switch-when="tuts">
-     <p>Total : ₩ 22,400</p>
+  <div ng-switch-when="navy">
+     <p>Total ₩ {{price*myCount}}</p>
   </div>
-  <div ng-switch-when="cars">
-     <p>Total : ₩ 22,400</p>
+  <div ng-switch-when="brown">
+     <p>Total ₩ {{price*myCount}}</p>
   </div>
 </div>
 
